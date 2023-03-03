@@ -8,25 +8,20 @@ function brew_install_or_upgrade {
     fi
 }
 
-# Update the repos
+# Update repos
 brew update
 
-# Check the health
+# Upgrade repos
+brew upgrade
+
+# Check health
 brew doctor
 
-# Install OpenSSL
-brew_install_or_upgrade openssl
+# Disable analytics
+brew analytics off
 
-# Install optimized tools
-#########################
-# Install rg to replace grep
-brew_install_or_upgrade ripgrep
-# Install command line fuzzy finder
-brew_install_or_upgrade fzf
-# Install tree
-brew_install_or_upgrade tree
-# Install ack
-brew_install_or_upgrade ack
+# Install ZSH
+brew install zsh
 
-# Install internet tools
-brew_install_or_upgrade nmap
+# Cleanup
+brew cleanup
