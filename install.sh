@@ -1,15 +1,29 @@
 #!/bin/bash -e
 
-# Install Xcode Command Line Tools
-xcode-select --install || true
-
-# node-gyp rebuild issue. Enable command lint tools and ignore the warnings.
-sudo xcode-select --switch /Library/Developer/CommandLineTools
-
+echo Installing Homebrew...
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo done.
 
-# Install command line tools
+echo Configuring Brew...
+# Brew config
 ./brew/install.sh
-# Install apps
-./brew-cask/install.sh
+echo done.
+
+echo Installing applications...
+# Install GUI apps
+./cask/apps/install.sh
+echo done.
+
+echo Installing terminal tools...
+# Install terminal tools
+./cask/terminal/install.sh
+echo done.
+
+echo Installing developer tools...
+# Install dev tools
+./cask/dev/install.sh
+echo done.
+
+echo Everything set, ready, go!
+exit
