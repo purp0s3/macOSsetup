@@ -1,23 +1,30 @@
 # macOSsetup
-Automatically setup macOS. **work in progress**
+Automatically setup macOS. **WIP**
 
 ## Includes
 ### Apps
-- VSCode
 - Firefox
 - Chrome
+- Orion
+- VS Code
+- CotEdit
+- GitHub GUI
+- App Cleaner
 - Discord
-- AppCleaner
 - Rectangle
 
 ### Terminal
-- ZSH
 - Homebrew
 - Homebrew Cask
-- Git
+- ZSH
+- Git CLI
 
 ### Developer tools
-- 
+- Theos & Jailed
+- ios-deploy
+- Azule
+- ipatool
+- dragon
 
 ---
 
@@ -26,10 +33,10 @@ Automatically setup macOS. **work in progress**
 ```shell
 git clone https://github.com/purp0s3/macOSsetup ~/macOSsetup
 cd ~/macOSsetup
+chmod +x install.sh
 ```
 
 ### 2. Run script
 ```shell
-chmod +x install.sh
 ./install.sh
 ```

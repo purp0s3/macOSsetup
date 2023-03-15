@@ -1,12 +1,6 @@
 #!/bin/bash -e
 
 echo Installing Homebrew...
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-echo done.
-
-echo Configuring Brew...
-# Brew config
 ./brew/install.sh
 echo done.
 

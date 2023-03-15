@@ -1,20 +1,24 @@
 #!/bin/sh -e
 ###################
 
-# Install Browsers
-brew install --cask firefox
-brew install --cask google-chrome
+# Install tools
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
 
-# Install IDE
-brew install --cask visual-studio-code
+git clone --recursive https://github.com/opa334/theos-jailed ~/theos-jailed
+cd ~/theos-jailed
+./install
 
-# Apps
-#################
+brew install ios-deploy
 
-brew install gh
-brew install --cask appcleaner
-brew install --cask discord
-brew install --cask rectangle
+git clone https://github.com/Al4ise/Azule ~/Azule
+cd ~/Azule
+sudo ln -sf ~/Azule/azule /usr/local/bin/azule
+
+brew tap majd/repo
+brew install ipatool
+
+brew install pip3
+pip3 install dragon
 
 # Cleanup
 brew cleanup

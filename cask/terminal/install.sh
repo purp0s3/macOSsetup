@@ -1,20 +1,12 @@
 #!/bin/sh -e
 ###################
 
-# Install Browsers
-brew install --cask firefox
-brew install --cask google-chrome
+# ZSH Installation & Config
+brew install zsh
+chsh -s /usr/local/bin/zsh
 
-# Install IDE
-brew install --cask visual-studio-code
-
-# Apps
-#################
-
+# GitHub CLI
 brew install gh
-brew install --cask appcleaner
-brew install --cask discord
-brew install --cask rectangle
 
 # Cleanup
 brew cleanup
